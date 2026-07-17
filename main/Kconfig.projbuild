@@ -1,0 +1,47 @@
+menu "Camper Firmware"
+
+config CAMPER_MODEM_APN
+    string "Cellular APN"
+    default ""
+    help
+        APN used for the SIM7080G packet-data context. Leave blank only
+        when your SIM provider auto-provisions the APN.
+
+config CAMPER_MQTT_HOST
+    string "MQTT broker hostname"
+    default ""
+    help
+        Required public DNS hostname for the MQTT broker, for example a
+        HiveMQ Cloud endpoint.
+
+config CAMPER_MQTT_USERNAME
+    string "MQTT username"
+    default ""
+    help
+        Required MQTT username stored in local sdkconfig and not committed
+        to source control.
+
+config CAMPER_MQTT_PASSWORD
+    string "MQTT password"
+    default ""
+    help
+        Required MQTT password stored in local sdkconfig and not committed
+        to source control.
+
+config CAMPER_VICTRON_TARGET_ADDR
+    string "Victron target BLE MAC address"
+    default ""
+    help
+        Enter the Victron device BLE MAC address in normal human-readable
+        order, for example AA:BB:CC:DD:EE:FF. This value is stored in the
+        local sdkconfig file, which is gitignored.
+
+config CAMPER_VICTRON_KEY_HEX
+    string "Victron Instant Readout key (32 hex chars)"
+    default ""
+    help
+        Enter the 16-byte Victron Instant Readout key as 32 hexadecimal
+        characters. This value is stored only in the local sdkconfig file
+        and is not committed to source control.
+
+endmenu

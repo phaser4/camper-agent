@@ -1,0 +1,7 @@
+build/
+sdkconfig
+sdkconfig.old
+isrgrootx1.pem
+main/isrgrootx1.pem
+Project Context.md
+eim_config.toml

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #1f2937; }
+      .label { font: 700 20px Arial, sans-serif; fill: #1f2937; }
+      .text { font: 16px Arial, sans-serif; fill: #334155; }
+      .small { font: 14px Arial, sans-serif; fill: #475569; }
+      .dim { font: 15px Arial, sans-serif; fill: #0f766e; }
+      .outline { fill: #fcfcf7; stroke: #1f2937; stroke-width: 4; }
+      .board-power { fill: #f6d365; stroke: #9a6700; stroke-width: 3; }
+      .board-control { fill: #b8e1ff; stroke: #2563eb; stroke-width: 3; }
+      .board-modem { fill: #f8b4b4; stroke: #b91c1c; stroke-width: 3; }
+      .battery { fill: #d9f99d; stroke: #4d7c0f; stroke-width: 3; }
+      .sensor { fill: #e9d5ff; stroke: #7c3aed; stroke-width: 2; }
+      .detail { fill: none; stroke: #475569; stroke-width: 2; stroke-dasharray: 8 6; }
+      .vent { stroke: #0f766e; stroke-width: 4; }
+      .wire { fill: none; stroke: #64748b; stroke-width: 3; stroke-dasharray: 9 7; }
+      .arrow { marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="900" fill="#fffdf8" />
+
+  <text x="60" y="60" class="title">Camper Monitor Enclosure Draft Layout</text>
+  <text x="60" y="92" class="text">Concept only. Not yet based on measured board outlines.</text>
+
+  <text x="60" y="145" class="label">Top View</text>
+  <rect x="60" y="170" width="760" height="520" rx="22" class="outline" />
+
+  <text x="355" y="160" class="dim">Approx. 180 mm</text>
+  <text x="28" y="445" class="dim" transform="rotate(-90 28 445)">Approx. 120 mm</text>
+
+  <rect x="105" y="245" width="195" height="230" rx="16" class="board-power" />
+  <text x="140" y="305" class="label">DFR0535</text>
+  <text x="130" y="334" class="text">Power manager</text>
+  <text x="130" y="360" class="text">Fuse / TVS side nearby</text>
+  <text x="130" y="386" class="text">Short camper-input run</text>
+
+  <rect x="350" y="215" width="185" height="130" rx="16" class="board-control" />
+  <text x="377" y="262" class="label">XIAO + Carrier</text>
+  <text x="382" y="290" class="text">ESP32-C6</text>
+  <text x="382" y="316" class="text">MAX17043 + headers</text>
+
+  <rect x="540" y="228" width="70" height="58" rx="10" class="sensor" />
+  <text x="552" y="263" class="small">SHT40</text>
+
+  <rect x="355" y="420" width="250" height="155" rx="18" class="battery" />
+  <text x="430" y="490" class="label">1S Backup Battery</text>
+  <text x="394" y="520" class="text">Foam pad + strap or clamp</text>
+
+  <rect x="630" y="230" width="150" height="290" rx="16" class="board-modem" />
+  <text x="650" y="292" class="label">SIM7080G HAT</text>
+  <text x="650" y="322" class="text">5 V switched rail</text>
+  <text x="650" y="348" class="text">Keep antenna side open</text>
+
+  <circle cx="710" cy="555" r="36" class="detail" />
+  <text x="666" y="561" class="small">Capacitor</text>
+
+  <rect x="92" y="515" width="180" height="90" rx="12" class="detail" />
+  <text x="114" y="552" class="text">Power wiring bay</text>
+  <text x="114" y="578" class="small">Fuse, disconnect, strain relief</text>
+
+  <line x1="118" y1="210" x2="118" y2="660" class="detail" />
+  <text x="84" y="202" class="small">Cable glands</text>
+  <line x1="100" y1="220" x2="132" y2="220" class="arrow detail" />
+
+  <line x1="782" y1="210" x2="782" y2="635" class="detail" />
+  <text x="668" y="202" class="small">LTE / GNSS exits</text>
+  <line x1="700" y1="212" x2="770" y2="212" class="arrow detail" />
+
+  <line x1="612" y1="255" x2="628" y2="255" class="wire" />
+  <line x1="535" y1="305" x2="628" y2="305" class="wire" />
+  <line x1="448" y1="345" x2="448" y2="418" class="wire" />
+  <line x1="300" y1="360" x2="350" y2="300" class="wire" />
+
+  <line x1="568" y1="192" x2="568" y2="170" class="vent" />
+  <line x1="590" y1="192" x2="590" y2="170" class="vent" />
+  <line x1="612" y1="192" x2="612" y2="170" class="vent" />
+  <text x="478" y="150" class="small">Vented area near sensor</text>
+
+  <text x="870" y="145" class="label">Side Section</text>
+  <rect x="870" y="170" width="260" height="520" rx="22" class="outline" />
+
+  <line x1="900" y1="620" x2="1100" y2="620" stroke="#1f2937" stroke-width="4" />
+  <rect x="930" y="535" width="145" height="55" rx="8" class="battery" />
+  <text x="952" y="568" class="small">Battery low in case</text>
+
+  <rect x="920" y="445" width="95" height="42" rx="8" class="board-power" />
+  <text x="932" y="472" class="small">DFR0535</text>
+
+  <rect x="1030" y="420" width="75" height="85" rx="8" class="board-modem" />
+  <text x="1042" y="465" class="small">Modem</text>
+
+  <rect x="953" y="375" width="105" height="30" rx="8" class="board-control" />
+  <text x="972" y="395" class="small">XIAO carrier</text>
+
+  <line x1="1098" y1="455" x2="1130" y2="455" class="arrow detail" />
+  <text x="968" y="350" class="small">Removable lid</text>
+  <text x="917" y="660" class="text">Target depth: about 45 mm</text>
+  <text x="917" y="688" class="text">Lid bosses over perimeter</text>
+
+  <text x="60" y="760" class="label">Draft Notes</text>
+  <text x="60" y="794" class="text">1. Separate the environmental sensor from charger and modem heat.</text>
+  <text x="60" y="822" class="text">2. Keep camper-power wiring on one side and antenna cables on the other.</text>
+  <text x="60" y="850" class="text">3. Leave center access for USB programming, harness service, and battery removal.</text>
+</svg>
